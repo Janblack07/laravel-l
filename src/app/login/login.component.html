@@ -1,0 +1,35 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="assets/logo2.jpg" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+            <div>
+                <input type="text" id="login" class="fadeIn second" placeholder="Correo" formControlName="correoU" [class.is-invalid]="validarusuario">
+                <br><small *ngIf="validarusuario" class="text-danger">Ingrese el email</small>
+            </div>
+            <div>
+                <input type="password" id="password" class="fadeIn third" placeholder="Contraseña" formControlName="passwordU" [class.is-invalid]="validarpassword">
+                <br><small *ngIf="validarpassword" class="text-danger">Ingrese una contraseña con el minimo de 6 caracteres</small>
+            </div>
+            <div>
+                <input type="submit" class="fadeIn fourth " value="Iniciar Session">
+            </div>
+
+
+
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" routerLink="/register"> Desea crear una cuenta de Usuario?</a>
+        </div>
+
+    </div>
+</div>
