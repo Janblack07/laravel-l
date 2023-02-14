@@ -12,7 +12,7 @@
         <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
             <div>
                 <input type="text" id="login" class="fadeIn second" placeholder="Correo" formControlName="correoU" [class.is-invalid]="validarusuario">
-                <br><small *ngIf="validarusuario" class="text-danger">Ingrese el email</small>
+                <br><small *ngIf="validarusuario" class="text-danger">Ingrese un email valido</small>
             </div>
             <div>
                 <input type="password" id="password" class="fadeIn third" placeholder="Contraseña" formControlName="passwordU" [class.is-invalid]="validarpassword">
