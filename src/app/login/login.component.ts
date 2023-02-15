@@ -1,6 +1,8 @@
 import { Component , OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators,FormArray } from '@angular/forms';
 import { AuthenticationService } from '../service/authentication.service';
+import { Response } from '../logincontrol/response.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +17,7 @@ loginForm= new FormGroup({
 
 })
 
-constructor(private aut:AuthenticationService){
+constructor(private aut:AuthenticationService, private router:Router){
 }
 OnInit(){
 
@@ -43,7 +45,13 @@ if(this.loginForm.invalid){
   console.log(Form);
   this.aut.loginUser(Form).subscribe((data:any)=>{
     console.log(data);
+
+      localStorage.setItem('token',data.access_token);
+      this.router.navigate(['principal']);
+      alert('Se registro con exito.');
   },(e)=>{console.log(e);});
+
+
 }
 
 }

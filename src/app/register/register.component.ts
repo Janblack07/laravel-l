@@ -57,6 +57,7 @@ export class RegisterComponent {
       console.log(Form);
       this.aut.registerUser(Form).subscribe((data:any)=>{
         console.log(data);
+        alert('Se creo el usuario.');
       },(e)=>{console.log(e);});
     }
 

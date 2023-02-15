@@ -1,0 +1,67 @@
+<!-- <form [formGroup]="peliculasForm" (ngSubmit)="OncrearMovie(peliculasForm.value)">
+    <div class="mb-3 ">
+        <label class="form-label">Nombre de la pelicula</label>
+        <input type="text" class="form-control" placeholder="Nombre de la pelicula" formControlName="nombreP">
+    </div>
+    <div class="mb-3">
+        <label class="form-label ">Imagen de la Pelicula</label>
+        <input type="file" class="form-control " placeholder="Imagen de la pelicula " formControlName="imagenP" (change)="onFileSelected($event)">
+    </div>
+    <div class=" mb-3 ">
+        <label class="form-label ">Precio de la Pelicula</label>
+        <input type="number" class="form-control " placeholder="Precio de la pelicula " formControlName="precioP">
+
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label ">fecha de estreno de la Pelicula</label>
+        <input type="date" class="form-control " placeholder="Fecha de estreno de la pelicula " formControlName="estrenoP">
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label ">Duracion de la Pelicula</label>
+        <input type="time" class="form-control " placeholder="Duracion de la pelicula " formControlName="duracionP">
+
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label ">Genero de la Pelicula</label>
+        <input type="text" class="form-control " placeholder="Genero de la pelicula " formControlName="nombreGP">
+
+    </div>
+
+    <button type="submit " class="btn btn-primary ">Crear Pelicula</button>
+
+
+</form>
+ -->
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+
+        <form [formGroup]="peliculasForm" (ngSubmit)="OncrearMovie(peliculasForm.value)">
+            <div>
+                <input type="text" class="fadeIn second" placeholder="Nombre de la pelicula" formControlName="nombreP" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="file" class="fadeIn second" placeholder="Nombre de la pelicula" (change)="onFileSelected($event)" formControlName="imagenP" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="number" class="fadeIn second" placeholder="Precio de la pelicula" formControlName="precioP" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="date" class="fadeIn second" placeholder="fecha de estreno de la pelicula" formControlName="estrenoP" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="time" class="fadeIn second" placeholder="duracion de la pelicula" formControlName="duracionP" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="text" class="fadeIn second" placeholder="nombre del genero de la pelicula" formControlName="nombreGP" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="submit" class="fadeIn fourth" value="crear una Pelicula">
+            </div>
+        </form>

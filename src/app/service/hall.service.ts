@@ -12,22 +12,22 @@ export class HallService {
     return this.http.post(this.api+'salas',body);
 
   }
-  updateMovie(body:any,id:any){
+  updateHall(body:any,id:any){
 
     return this.http.post(`${this.api}salas/${id}`,body);
 
   }
-  destroyMovie(id:any){
+  destroyHall(id:any){
 
     return this.http.delete(`${this.api}salas/${id}`);
 
   }
-  allMovie(){
+  allHall(){
 
     return this.http.get(`${this.api}salas`);
   }
 
-  oneMovie(id:any){
+  oneHall(id:any){
     return this.http.get(`${this.api}salas/${id}`);
   }
 

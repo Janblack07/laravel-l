@@ -147,7 +147,7 @@ input[type=text]:placeholder {
     color: #cccccc;
 }
 
-input[type=password] {
+input[type=file] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -168,16 +168,16 @@ input[type=password] {
     border-radius: 5px 5px 5px 5px;
 }
 
-input[type=password]:focus {
+input[type=file]:focus {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
 }
 
-input[type=password]:placeholder {
+input[type=file]:placeholder {
     color: #cccccc;
 }
 
-select {
+input[type=number] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -198,12 +198,12 @@ select {
     border-radius: 5px 5px 5px 5px;
 }
 
-select:focus {
+input[type=number]:focus {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
 }
 
-select:placeholder {
+input[type=number]:placeholder {
     color: #cccccc;
 }
 

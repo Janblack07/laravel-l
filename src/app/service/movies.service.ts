@@ -9,6 +9,8 @@ export class MoviesService {
   constructor(private http: HttpClient) {
 
    }
+
+
    createMovie(body:any){
 
     return this.http.post(this.api+'peliculas',body);
@@ -26,7 +28,8 @@ export class MoviesService {
   }
   allMovie(){
 
-    return this.http.get(`${this.api}peliculas`);
+    return this.http.get(`${this.api}peliculas`,{
+      headers:{'Authorization': 'Bearer ' + localStorage.getItem('token')}});
   }
 
   oneMovie(id:any){

@@ -1,0 +1,17 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+
+        <form [formGroup]="salaForm" (ngSubmit)="OnRegistroSala(salaForm.value)">
+            <div>
+                <input type="text" class="fadeIn second" placeholder="Nombre de la sala" formControlName="nombreS" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="number" class="fadeIn second" placeholder="Numero de los asientos" formControlName="numeroAsientos" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="submit" class="fadeIn fourth" value="crear una Sala">
+            </div>
+        </form>

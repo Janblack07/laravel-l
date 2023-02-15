@@ -1,0 +1,12 @@
+<div class="row ">
+    <div *ngFor="let item of sala" class="col-md-3 p-5 ">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Nombre : {{item.nombreS}}</h5>
+                <h5 class="card-title">Asientos: {{item.numeroAsientos}}</h5>
+                <button href="#" class="btn btn-primary ">Editar</button>
+                <button href="# " class="btn btn-danger mx-2 " (click)="onDelete(item.id) ">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
