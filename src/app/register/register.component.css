@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: #92badd;
+    color: #E3554B;
     display: inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -80,7 +80,7 @@ h2.active {
 input[type=button],
 input[type=submit],
 input[type=reset] {
-    background-color: green;
+    background-color: red;
     border: none;
     color: white;
     padding: 15px 80px;
@@ -104,7 +104,7 @@ input[type=reset] {
 input[type=button]:hover,
 input[type=submit]:hover,
 input[type=reset]:hover {
-    background-color: #40BE14;
+    background-color: #E3554B;
 }
 
 input[type=button]:active,
@@ -140,7 +140,7 @@ input[type=text] {
 
 input[type=text]:focus {
     background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
+    border-bottom: 2px solid #E3554B;
 }
 
 input[type=text]:placeholder {
@@ -170,7 +170,7 @@ input[type=password] {
 
 input[type=password]:focus {
     background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
+    border-bottom: 2px solid #E3554B;
 }
 
 input[type=password]:placeholder {
@@ -200,7 +200,7 @@ select {
 
 select:focus {
     background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
+    border-bottom: 2px solid #E3554B;
 }
 
 select:placeholder {
@@ -324,7 +324,7 @@ select:placeholder {
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #56baed;
+    background-color: #E3554B;
     content: "";
     transition: width 0.2s;
 }

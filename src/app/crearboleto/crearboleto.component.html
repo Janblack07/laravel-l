@@ -1,1 +1,23 @@
-<p>crearboleto works!</p>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <form>
+            <div>
+                <input type="text" class="fadeIn second " placeholder="Nombre del cliente " formControlName="nombreC" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="text" class="fadeIn second " placeholder="Apellido del cliente " formControlName="apellidoC" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="text" class="fadeIn second " placeholder="Cedula del cliente " formControlName="cedulaC" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="text" class="fadeIn second " placeholder="jandry@tal.com " formControlName="correoC" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="submit" class="fadeIn fourth " value="Generar Boleto">
+            </div>
+        </form>
