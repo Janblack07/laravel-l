@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BoletoComponent } from './boleto/boleto.component';
+import { CrearboletoComponent } from './crearboleto/crearboleto.component';
 import { EditarpeliculaComponent } from './editarpelicula/editarpelicula.component';
 import { EditarsalaComponent } from './editarsala/editarsala.component';
 import { IngresarpeliculaComponent } from './ingresarpelicula/ingresarpelicula.component';
@@ -41,7 +42,7 @@ const routes: Routes = [
     ]},
     {path: 'boleto', component: BoletoComponent, children:[
       {path:'ver',component:VerboletoComponent},
-      {path:'crear',component:VersalapeliculaComponent},
+      {path:'crear',component:CrearboletoComponent},
     ]}
   ] },//cambiar
 
