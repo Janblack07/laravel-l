@@ -18,6 +18,12 @@ import { CardpeliculaComponent } from './cardpelicula/cardpelicula.component';
 import { CardsalaComponent } from './cardsala/cardsala.component';
 import { VersalaComponent } from './versala/versala.component';
 import { VerpeliculaComponent } from './verpelicula/verpelicula.component';
+import { SalapeliculaComponent } from './salapelicula/salapelicula.component';
+import { VersalapeliculaComponent } from './versalapelicula/versalapelicula.component';
+import { IngresarsalapeliculaComponent } from './ingresarsalapelicula/ingresarsalapelicula.component';
+import { BoletoComponent } from './boleto/boleto.component';
+import { VerboletoComponent } from './verboleto/verboleto.component';
+import { CrearboletoComponent } from './crearboleto/crearboleto.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { VerpeliculaComponent } from './verpelicula/verpelicula.component';
     CardpeliculaComponent,
     CardsalaComponent,
     VersalaComponent,
-    VerpeliculaComponent
+    VerpeliculaComponent,
+    SalapeliculaComponent,
+    VersalapeliculaComponent,
+    IngresarsalapeliculaComponent,
+    BoletoComponent,
+    VerboletoComponent,
+    CrearboletoComponent
   ],
   imports: [
     BrowserModule,

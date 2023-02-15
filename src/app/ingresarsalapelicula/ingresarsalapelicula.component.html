@@ -1,0 +1,31 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <form [formGroup]="salaPeliculaForm" (submit)="OnRegistroSalaPelicula(salaPeliculaForm.value)">
+            <div>
+                <input type="date" class="fadeIn second" placeholder="Fecha" formControlName="fecha" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="time" class="fadeIn second" placeholder="hora de inicio de la sala" formControlName="horaI" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <input type="time" class="fadeIn second" placeholder="hora de fin de la sala" formControlName="horaF" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+            </div>
+            <div>
+                <select class="form-select" aria-label="Default select example" formControlName="sala_id">
+                <option selected>Seleccionar Sala</option>
+                <option *ngFor="let item of sala" value={{item.id}}>{{item.nombreS}}</option>
+              </select>
+            </div>
+            <div>
+                <select class="form-select" aria-label="Default select example" formControlName="pelicula_id">
+                <option selected>Seleccionar Pelicula</option>
+                <option *ngFor="let item of pelicula" value={{item.id}}>{{item.nombreP}}</option>
+              </select>
+            </div>
+            <div>
+                <input type="submit" class="fadeIn fourth" value="crear una SalaPelicula">
+            </div>
+        </form>

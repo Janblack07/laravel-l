@@ -4,7 +4,7 @@
             <img style="height: 12em;object-fit: cover;" src="{{item.url_imagenP}}" class="card-img-top w-100" alt="imagen">
             <div class="card-body">
                 <h5 class="card-title">{{item.nombreP}}</h5>
-                <button href="#" class="btn btn-primary ">Editar</button>
+                <a class="btn btn-primary  " [routerLink]='["/principal/pelicula/editar/",item.id]'>Editar</a>
                 <button href="#" class="btn btn-danger mx-2" (click)="onDelete(item.id)">Eliminar</button>
             </div>
         </div>

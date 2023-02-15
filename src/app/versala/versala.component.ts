@@ -21,10 +21,17 @@ export class VersalaComponent {
       console.log(e);
     })
   }
+  Onupdate(id:any){
+      this.hall.updateHall(id,this.sala).subscribe((data:any)=>{
+        alert('Se modifico Correctamente.');
+        this.OnHall();
+      },(e)=>{console.log(e);})
+  }
   onDelete(id:any){
     this.hall.destroyHall(id).subscribe((data:any)=>{
         alert('Se Elimino Correctamente.');
         this.OnHall();
     },(e)=>{console.log(e);})
   }
+
 }

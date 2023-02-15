@@ -12,7 +12,7 @@ export class HallService {
     return this.http.post(this.api+'salas',body);
 
   }
-  updateHall(body:any,id:any){
+  updateHall(id:any,body:any){
 
     return this.http.post(`${this.api}salas/${id}`,body);
 

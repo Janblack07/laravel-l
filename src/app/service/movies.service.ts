@@ -16,7 +16,7 @@ export class MoviesService {
     return this.http.post(this.api+'peliculas',body);
 
   }
-  updateMovie(body:any,id:any){
+  updateMovie(id:any,body:any){
 
     return this.http.post(`${this.api}peliculas/${id}`,body);
 

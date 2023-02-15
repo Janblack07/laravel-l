@@ -1,6 +1,6 @@
 import { Component , OnInit} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HallService } from '../service/hall.service';
 
 @Component({
@@ -10,15 +10,35 @@ import { HallService } from '../service/hall.service';
 })
 export class EditarsalaComponent {
   data:any;
-    salaForm= new FormGroup({
+  id:any;
+  editMode: boolean = false;
+      salaForm= new FormGroup({
       nombreS: new FormControl('', [Validators.required]),
       numeroAsientos: new FormControl('', [Validators.required]),
     })
-    constructor(private aut:HallService, private router:Router ){
+    constructor(private aut:HallService, private router:Router , private route:ActivatedRoute){
     }
 
     ngOnInit(){
 
+       this.id = this.route.snapshot.params['id'];
+
+        this.aut.oneHall(this.id).subscribe((data:any)=>{
+        this.data=data.Salas;
+        this.salaForm.setValue({
+          "nombreS": this.data.nombreS,
+          "numeroAsientos":this.data.numeroAsientos
+        })
+      },(e)=>{console.log(e);});
+
+    }
+
+    onUpdate(data:any){
+      console.log(data);
+       this.aut.updateHall(this.id,data).subscribe((data =>{
+        alert('Se actualizo conrrectamente.');
+        this.router.navigate(['/principal/sala/ver']);
+      }))
     }
     get validarnombreS(){
       return this.salaForm.get('nombreS')?.invalid
@@ -30,5 +50,7 @@ export class EditarsalaComponent {
       && this.salaForm.get('numeroAsientos')?.touched;
 
     }
+
+
 
 }

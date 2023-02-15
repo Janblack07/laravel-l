@@ -1,1 +1,37 @@
-<p>editarpelicula works!</p>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+
+        <form [formGroup]="peliculasForm" (submit)="onUpdate(peliculasForm.value)">
+            <div>
+                <input type="text" class="fadeIn second" placeholder="Nombre de la pelicula" formControlName="nombreP" [class.is-invalid]="">
+                <br><small *ngIf="" class="text-danger"></small>
+
+                <div>
+                    <img src="{{image}}" class="img-fluid w-50 h-50" alt="imagen">
+                </div>
+            </div>
+            <div>
+                <input type="file" class="fadeIn second " placeholder="Imagen de la pelicula " formControlName="imagenP" (change)="onFileSelected($event)" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="number" class="fadeIn second " placeholder="Precio de la pelicula " formControlName="precioP" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="date" class="fadeIn second " placeholder="fecha de estreno de la pelicula " formControlName="estrenoP" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="time" class="fadeIn second " placeholder="duracion de la pelicula " formControlName="duracionP" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="text" class="fadeIn second " placeholder="nombre del genero de la pelicula " formControlName="nombreGP" [class.is-invalid]=" ">
+                <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <div>
+                <input type="submit" class="fadeIn fourth " value="Actualizar una Pelicula ">
+            </div>
+        </form>

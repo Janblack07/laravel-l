@@ -1,0 +1,13 @@
+<div class="row ">
+    <div *ngFor="let item of salaPelicula" class="col-md-3 p-5 ">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Fecha : {{item.fecha}}</h5>
+                <h5 class="card-title">Hora Inicio: {{item.horaI}}</h5>
+                <h5 class="card-title">Hora Fin: {{item.horaF}}</h5>
+                <h5 class="card-title">Sala: {{item.sala.nombreS}}</h5>
+                <h5 class="card-title">Pelicula: {{item.pelicula.nombreP}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

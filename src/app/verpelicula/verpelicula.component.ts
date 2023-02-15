@@ -23,6 +23,7 @@ export class VerpeliculaComponent {
     })
   }
   onDelete(id:any){
+    
     this.movie.destroyMovie(id).subscribe((data:any)=>{
         alert('Se Elimino Correctamente.');
         this.OnMovie();
