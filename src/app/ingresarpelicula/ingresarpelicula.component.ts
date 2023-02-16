@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MoviesService } from '../service/movies.service';
 
 @Component({
@@ -19,7 +20,7 @@ export class IngresarpeliculaComponent {
 
   })
 
-  constructor(private aut:MoviesService){
+  constructor(private aut:MoviesService,private route:Router){
   }
   get validarnombreP(){
     return this.peliculasForm.get('nombreP')?.invalid
@@ -74,7 +75,7 @@ export class IngresarpeliculaComponent {
       this.aut.createMovie(body).subscribe((data:any)=>{
         console.log(data);
         alert('Se creo la pelicula.');
-
+        this.route.navigate(['/principal/pelicula/ver']);
       },(e)=>{console.log(e);});
     }
 

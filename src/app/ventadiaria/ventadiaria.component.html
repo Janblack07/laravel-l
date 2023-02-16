@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <table id="tablaArticulos" class="table table-striped table-bordered" style="width:100%;margin-top:3%">
+                <thead>
+                    <tr>
+                        <th>Cantidad en dolares de la venta</th>
+                        <th>fecha </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of venta">
+                        <td>
+                            {{item[1]}}
+                        </td>
+                        <td>{{item[0]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

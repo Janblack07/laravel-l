@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
@@ -18,7 +20,7 @@ export class RegisterComponent {
 
   })
 
-  constructor(private aut:AuthenticationService){
+  constructor(private aut:AuthenticationService,private r:Router){
   }
   get validarnombre(){
     return this.registerForm.get('nombreU')?.invalid
@@ -58,6 +60,7 @@ export class RegisterComponent {
       this.aut.registerUser(Form).subscribe((data:any)=>{
         console.log(data);
         alert('Se creo el usuario.');
+        this.r.navigate(['/login']);
       },(e)=>{console.log(e);});
     }
 

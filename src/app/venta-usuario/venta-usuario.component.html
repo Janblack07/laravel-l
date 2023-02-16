@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <table id="tablaArticulos" class="table table-striped table-bordered" style="width:100%;margin-top:3%">
+                <thead>
+                    <tr>
+                        <th>fecha</th>
+                        <th>dolares</th>
+                        <th>nombre del usuario</th>
+                        <th>apellido del usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of venta">
+                        <td>{{item?.fechaV}}</td>
+                        <td>{{item?.cantidad_total}}</td>
+                        <td>{{item?.nombreU}}</td>
+                        <td>{{item?.apellidoU}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

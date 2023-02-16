@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
+
 import { HallService } from '../service/hall.service';
 
 @Component({
@@ -12,7 +14,7 @@ export class IngresarsalaComponent {
     nombreS: new FormControl('', [Validators.required]),
     numeroAsientos: new FormControl('', [Validators.required]),
   })
-  constructor(private aut:HallService){
+  constructor(private aut:HallService, private route:Router){
   }
   get validarnombreS(){
     return this.salaForm.get('nombreS')?.invalid
@@ -36,6 +38,7 @@ export class IngresarsalaComponent {
       this.aut.createhall(Form).subscribe((data:any)=>{
         console.log(data);
         alert('Se creo la sala.');
+        this.route.navigate(['/principal/sala/ver']);
       },(e)=>{console.log(e);});
     }
 

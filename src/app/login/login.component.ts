@@ -48,7 +48,7 @@ if(this.loginForm.invalid){
 
       localStorage.setItem('token',data.access_token);
       this.router.navigate(['principal']);
-      alert('Se registro con exito.');
+      alert('Se Logeo con exito.');
   },(e)=>{console.log(e);});
 
 

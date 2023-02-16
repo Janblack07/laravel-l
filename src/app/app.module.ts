@@ -24,6 +24,11 @@ import { IngresarsalapeliculaComponent } from './ingresarsalapelicula/ingresarsa
 import { BoletoComponent } from './boleto/boleto.component';
 import { VerboletoComponent } from './verboleto/verboleto.component';
 import { CrearboletoComponent } from './crearboleto/crearboleto.component';
+import { VentadiariaComponent } from './ventadiaria/ventadiaria.component';
+import { VentaUsuarioComponent } from './venta-usuario/venta-usuario.component';
+import { VentaComponent } from './venta/venta.component';
+import { VerventaComponent } from './verventa/verventa.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,11 @@ import { CrearboletoComponent } from './crearboleto/crearboleto.component';
     IngresarsalapeliculaComponent,
     BoletoComponent,
     VerboletoComponent,
-    CrearboletoComponent
+    CrearboletoComponent,
+    VentadiariaComponent,
+    VentaUsuarioComponent,
+    VentaComponent,
+    VerventaComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +63,7 @@ import { CrearboletoComponent } from './crearboleto/crearboleto.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-
+    Ng2SearchPipeModule
 
 
 

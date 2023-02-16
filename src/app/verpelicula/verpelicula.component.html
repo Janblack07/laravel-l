@@ -1,11 +1,14 @@
-<div class="row ">
-    <div *ngFor="let item of pelicula" class="col-md-3 p-5 ">
+<div style="display: flex; align-items:center; justify-content: center;">
+    <input type="text" [(ngModel)]="term" placeholder="Buscador de pelicula"><i class="bi bi-search"></i>
+</div>
+<div class="row">
+    <div *ngFor="let item of pelicula|filter:term" class="col-md-3 p-3">
         <div class="card" style="width: 18rem;">
-            <img style="height: 12em;object-fit: cover;" src="{{item.url_imagenP}}" class="card-img-top w-100" alt="imagen">
+            <img style="height: 12em;object-fit:cover;" src="{{item.url_imagenP}} " class="card-img-top w-100" alt="imagen">
             <div class="card-body">
-                <h5 class="card-title">{{item.nombreP}}</h5>
-                <a class="btn btn-primary  " [routerLink]='["/principal/pelicula/editar/",item.id]'>Editar</a>
-                <button href="#" class="btn btn-danger mx-2" (click)="onDelete(item.id)">Eliminar</button>
+                <h5 class="card-title ">{{item.nombreP}}</h5>
+                <a class="btn btn-primary" [routerLink]='["/principal/pelicula/editar/",item.id]'>Editar</a>
+                <button class="btn btn-danger mx-2" (click)="onDelete(item.id)">Eliminar</button>
             </div>
         </div>
     </div>

@@ -14,10 +14,14 @@ import { PrincipalComponent } from './principal/principal.component';
 import { RegisterComponent } from './register/register.component';
 import { SalaComponent } from './sala/sala.component';
 import { SalapeliculaComponent } from './salapelicula/salapelicula.component';
+import { VentaUsuarioComponent } from './venta-usuario/venta-usuario.component';
+import { VentaComponent } from './venta/venta.component';
+import { VentadiariaComponent } from './ventadiaria/ventadiaria.component';
 import { VerboletoComponent } from './verboleto/verboleto.component';
 import { VerpeliculaComponent } from './verpelicula/verpelicula.component';
 import { VersalaComponent } from './versala/versala.component';
 import { VersalapeliculaComponent } from './versalapelicula/versalapelicula.component';
+import { VerventaComponent } from './verventa/verventa.component';
 
 
 const routes: Routes = [
@@ -42,9 +46,14 @@ const routes: Routes = [
     ]},
     {path: 'boleto', component: BoletoComponent, children:[
       {path:'ver',component:VerboletoComponent},
-      {path:'crear',component:CrearboletoComponent},
+      {path:'crear/:id',component:CrearboletoComponent},
+    ]},
+    {path: 'venta', component: VentaComponent, children:[
+      {path:'ventaDU',component:VentaUsuarioComponent},
+      {path:'ventaD',component:VentadiariaComponent},
+      {path:'ver',component:VerventaComponent}
     ]}
-  ] },//cambiar
+  ] },
 
 ];
 

@@ -12,7 +12,7 @@ export class VerpeliculaComponent {
   ngOnInit(): void {
     this.OnMovie()
   }
-
+term!:any;
   OnMovie(){
     this.movie.allMovie().subscribe((data:any)=>{
       console.log(data);
@@ -23,7 +23,7 @@ export class VerpeliculaComponent {
     })
   }
   onDelete(id:any){
-    
+
     this.movie.destroyMovie(id).subscribe((data:any)=>{
         alert('Se Elimino Correctamente.');
         this.OnMovie();

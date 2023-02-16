@@ -1,21 +1,57 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
-        <form>
+        <form [formGroup]="clienteForm" (ngSubmit)="OnRegister(clienteForm.value)">
             <div>
-                <input type="text" class="fadeIn second " placeholder="Nombre del cliente " formControlName="nombreC" [class.is-invalid]=" ">
+                <input type="text" class="fadeIn second " placeholder="Nombre del cliente" formControlName="nombreC" [class.is-invalid]=" ">
                 <br><small *ngIf=" " class="text-danger "></small>
             </div>
             <div>
-                <input type="text" class="fadeIn second " placeholder="Apellido del cliente " formControlName="apellidoC" [class.is-invalid]=" ">
+                <input type="text" class="fadeIn second " placeholder="Apellido del cliente" formControlName="apellidoC" [class.is-invalid]=" ">
                 <br><small *ngIf=" " class="text-danger "></small>
             </div>
             <div>
-                <input type="text" class="fadeIn second " placeholder="Cedula del cliente " formControlName="cedulaC" [class.is-invalid]=" ">
+                <input type="text" class="fadeIn second " placeholder="Cedula del cliente" formControlName="cedulaC" [class.is-invalid]=" ">
                 <br><small *ngIf=" " class="text-danger "></small>
             </div>
             <div>
-                <input type="text" class="fadeIn second " placeholder="jandry@tal.com " formControlName="correoC" [class.is-invalid]=" ">
+                <input type="text" class="fadeIn second " placeholder="jandry@tal.com" formControlName="correoC" [class.is-invalid]=" ">
                 <br><small *ngIf=" " class="text-danger "></small>
+            </div>
+            <ul class="showcase">
+                <li>
+                    <div class="seat"></div>
+                    <small>N/A</small>
+                </li>
+                <li>
+                    <div class="seat occupied"></div>
+                    <small>Occupied</small>
+                </li>
+
+            </ul>
+
+            <div class="container">
+                <div class="screen"></div>
+
+                <div class="row">
+                    <div *ngFor="let item of boleto">
+                        <input formControlName="asientos" type="radio" value="{{item.id}}" *ngIf="item.estado">{{item.numeroAsientos}}
+                        <i [ngClass]="item.estado?'bi bi-circle':'bi bi-circle-fill'"></i>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-3 p-5 ">
+                            <div class="card " style="width: 18rem; ">
+                                <div class="card-body ">
+                                    <h5 class="card-title ">Fecha : {{v?.fecha}}</h5>
+                                    <h5 class="card-title ">Hora Inicio: {{v?.horaI}}</h5>
+                                    <h5 class="card-title ">Hora Fin: {{v?.horaF}}</h5>
+                                    <h5 class="card-title ">Sala: {{v?.sala.nombreS}}</h5>
+                                    <h5 class="card-title ">Pelicula: {{v?.pelicula.nombreP}}</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>
                 <input type="submit" class="fadeIn fourth " value="Generar Boleto">

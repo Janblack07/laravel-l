@@ -8,6 +8,7 @@ import { HallService } from '../service/hall.service';
 })
 export class VersalaComponent {
   sala!:any;
+  term!:any;
   constructor(private hall:HallService){}
   ngOnInit(): void {
     this.OnHall()
